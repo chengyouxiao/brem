@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "brem"
+version = "0.1.0"
+description = "Bill Remind"
+authors = ["Chengyou Xiao"]
+packages = [
+    {include = "brem-svc"}
+]
+include = ["brem-svc/react_build/**/*"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pandas = "^1.4.2"
+pysqlite3 = "^0.4.7"
+fastapi = "^0.76.0"
+uvicorn = "^0.17.6"
+
+
+[tool.poetry.dev-dependencies]
+ipykernel = "^6.13.0"
+notebook = "^6.4.11"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
